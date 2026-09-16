@@ -4,4 +4,8 @@ public class Reflector {
 
         //What letter is wired to what letter
 
+    //METHODS
+
+        //Input to output
+
 }
