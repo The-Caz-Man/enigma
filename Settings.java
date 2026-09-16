@@ -22,5 +22,14 @@ public class Settings {
             //Example: AV BS CG DL FU HZ IN KM OW RX
         String [] plugConfiguration = new String[10];
 
+        //Settings constructor
+        public Settings(char reflector, String[] rotors, int[] ringSettings, int[] rotorPositions, String[] plugConfiguration) {
+            this.reflector = reflector;
+            this.rotors = rotors;
+            this.ringSettings = ringSettings;
+            this.rotorPositions = rotorPositions;
+            this.plugConfiguration = plugConfiguration;
+        }
+
 }
 
