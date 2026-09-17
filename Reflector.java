@@ -6,22 +6,28 @@ public class Reflector {
     //Reflector B (Standard WWII Wehrmacht/Army/Luftwaffe)
     String [] wireConfiguration = {"AY", "BR", "CU", "DH", "EQ", "FS", "GL", "HD", "IP", "JX", "KN", "LG", "MO", "NK", "OM", "PI", "QE", "RB", "SF", "TZ", "UC", "VW", "WV", "XJ", "YA", "ZT"};
 
+
+
     //METHODS
 
-    //PRE: Takes char
-    //POST: return reflected char
+    //PRE: Takes char input
+    //POST: return char that comes out of the reflector
     public char inToOut(char input) {
 
+        //Get the wiring string that matches input. Example: 'A' -> "AY"
         String configString = this.getConfigString(input);
 
+        //Index variables for knowing if input is on left or right side of configString
         int outputIndex;
         int inputIndex = configString.indexOf(input);
 
+        //outputIndex = 1 if inputIndex = 0, and vice versa
         if (inputIndex == 0)
             outputIndex = 1;
         else
             outputIndex = 0;
 
+        //Get char based on index
         char output = configString.charAt(outputIndex);
 
         return output;
