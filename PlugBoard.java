@@ -15,11 +15,21 @@ public class PlugBoard {
 
         //If input is in plugConfiguration
         if (this.inConfiguration(input)) {
-            //set plug in use
+            //Get configuration string. Example "AH"
             String config = this.getConfigString(input);
-            Plug plug = new Plug(config);
-            //use plug.inOut() to get output
-            char output = plug.inToOut(input);
+            
+            //set input and output index
+            //If input is 'A' and config is "AH", inputIdex is 0 and outputIndex is 1
+            int outputIndex;
+            int inputIndex = config.indexOf(input);
+            if (inputIndex == 0)
+                outputIndex = 1;
+            else
+                outputIndex = 0;
+
+            //Get output char via outputIndex. Example 1 in "AH" gives you 'H'
+            char output = config.charAt(outputIndex);
+        
             return output;
 
 
