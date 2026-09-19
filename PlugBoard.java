@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 public class PlugBoard {
     //ATTRIBUTES
+
+    //An array list to offer a varying amount of plugs.
     ArrayList<String> plugConfiguration = new ArrayList<>();
 
     //PlugBoard constructor

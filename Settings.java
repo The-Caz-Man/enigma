@@ -11,9 +11,11 @@ public class Settings {
 
     //Plug board configurations
     //Example: AV BS CG DL FU HZ IN KM OW RX
+    //FIXME: Change this to an array list to match PlubBoard plugConfig attribute
     String [] plugConfiguration = new String[10];
 
     //Settings constructor
+    //FIXME: Change plugConfiguration to an Array list
     public Settings(String[] rotors, int[] rotorPositions, String[] plugConfiguration) {
         this.rotors = rotors;
         this.rotorPositions = rotorPositions;
