@@ -1,9 +1,11 @@
+import java.util.ArrayList;
+
 public class PlugBoard {
     //ATTRIBUTES
-    String [] plugConfiguration = new String[10];
+    ArrayList<String> plugConfiguration = new ArrayList<>();
 
     //PlugBoard constructor
-    public PlugBoard(String[] plugConfiguration) {
+    public PlugBoard(ArrayList<String> plugConfiguration) {
         this.plugConfiguration = plugConfiguration;
     }
 
