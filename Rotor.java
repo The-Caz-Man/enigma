@@ -25,7 +25,10 @@ public class Rotor {
         } else if (romanNumeral.equals("IV")) {
             this.wireConfiguration = new String[] {"AE", "BS", "CO", "DV", "EP", "FZ", "GJ", "HA", "IY", "JQ", "KU", "LI", "MR", "NH", "OX", "PL", "QN", "RF", "ST", "TG", "UK", "VD", "WC", "XM", "YW", "ZB"};
             this.willTurnOtherRotorNum = 10;
-        } //FIXME: add a fifth rotor
+        } else if (romanNumeral.equals("V")) {
+            this.wireConfiguration = new String[] {"AV", "BZ", "CB", "DR", "EG", "FI", "GT", "HY", "IU", "JP", "KS", "LD", "MN", "NH", "OL", "PX", "QA", "RW", "SM", "TJ", "UQ", "VO", "WF", "XE", "YC", "ZK"};
+            this.willTurnOtherRotorNum = 26;
+        }
     }
 
 
