@@ -18,5 +18,9 @@ public class Tests {
         char thirdTestOut = testPlugBoard.inToOut(secondTestOut);
         System.out.printf("%c outputs as %c\n\n", secondTestOut, thirdTestOut);
 
+        //Reflector Tests
+
+        //Rotor Tests
+
     }
 }
