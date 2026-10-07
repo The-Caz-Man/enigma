@@ -11,6 +11,7 @@ public class Rotor {
     private int position;
 
     //METHODS
+
     //Constructer
     public Rotor(String romanNumeral) {
 
@@ -33,6 +34,8 @@ public class Rotor {
         }
         this.position = 1;
     }
+
+    //PUBLIC METHODS
 
     //PRE: Takes char input and a boolean that is true 
     //      if the input is flowing torwards the 
@@ -66,9 +69,25 @@ public class Rotor {
         return output;
     }
 
+    //PRE:
+    //POST: Turns rotor one space (26 to 1 if at 26)
+    public void turnRotor() {
+        int position = this.getPosition();
+        position++;
+        if (position > 26)
+            position -= 26;
+        this.setPosition(position);
+    }
+
+    //Getters
     public int getPosition() {return this.position;}
-    public void setPosition(int position) {this.position = position;}
     public String[] getWireConfiguration() {return this.wireConfiguration;}
+
+    //Setters
+    public void setPosition(int position) {this.position = position;}
+
+
+    //PRIVATE METHODS
 
     //PRE: 
     //POST: Gets current rotor position and returns an
