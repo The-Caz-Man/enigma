@@ -39,7 +39,42 @@ public class Rotor {
     //      reflecter or false if moving away
     //POST: Return swapped letter.
     public char inToOut(char input, boolean preRelfector) {
+        //Default in case output doesn't work
         char output = (Character) null;
+
+        //Get new wire config base on rotor position
+        String [] tempWireConfiguration = this.getAdjustedConfig();
+
+        if (preRelfector) {
+            //Find config with index 0 matching input and return index 1
+            for (String config: tempWireConfiguration) {
+                if (config.charAt(0) == input) {
+                    output = config.charAt(1);
+                    break;
+                }
+            }
+        } else {
+            //Find config with index 1 matching input and return index 0
+            for (String config: tempWireConfiguration) {
+                if (config.charAt(1) == input) {
+                    output = config.charAt(0);
+                    break;
+                }
+            }
+
+        }
+        return output;
+    }
+
+    public int getPosition() {return this.position;}
+    public void setPosition(int position) {this.position = position;}
+    public String[] getWireConfiguration() {return this.wireConfiguration;}
+
+    //PRE: 
+    //POST: Gets current rotor position and returns an
+    //      adjusted wireconfiguration based on the rotor
+    //      position
+    private String [] getAdjustedConfig () {
         //Get current rotor position
         int position = this.getPosition();
 
@@ -63,28 +98,6 @@ public class Rotor {
             }
         }
 
-        if (preRelfector) {
-            for (String config: tempWireConfiguration) {
-                if (config.charAt(0) == input) {
-                    output = config.charAt(1);
-                    break;
-                }
-            }
-        } else {
-            for (String config: tempWireConfiguration) {
-                if (config.charAt(1) == input) {
-                    output = config.charAt(0);
-                    break;
-                }
-            }
-
-        }
-        return output;
+        return tempWireConfiguration;
     }
-
-    public int getPosition() {return this.position;}
-    public void setPosition(int position) {this.position = position;}
-    public String[] getWireConfiguration() {return this.wireConfiguration;}
-
-    
 }
